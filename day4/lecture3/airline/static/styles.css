@@ -1,0 +1,46 @@
+body{
+     background-color: antiquewhite;
+     position: relative;
+        }
+        
+        
+ main{
+           
+    font-family: 'Courier New', Courier, monospace;
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+      }
+.card{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    width: 500px;
+    justify-content: space-between;
+    border: 1px solid black;
+    border-radius: 5px;
+    box-shadow: 0 3px 10px rbg(0 0 0 / 0.2 );
+    padding: 20px;
+
+     }
+.content{
+    text-align: left;
+    color: black;
+    font-size: medium;
+     }
+span{
+    color: green;
+
+    }
+#name{
+    font: bold;
+    text-decoration: underline;
+    text-align: center;
+ }
+.para{
+    padding: auto;
+    }
+
+
+    

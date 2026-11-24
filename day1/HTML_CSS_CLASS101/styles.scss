@@ -1,0 +1,35 @@
+main{
+    .heading{
+        text-align: center;
+        display: block;
+        color: blue;
+        font: bold;
+    }
+    .list{
+        h4{
+            text-decoration: underline;
+            font: lighter;
+            font-size: medium;
+            color: red;
+        }
+        li{
+            color: gray;
+            font-size: small;
+            font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+        }
+
+    }
+    .link{
+        h5{
+            text-decoration: underline;
+            font: lighter;
+            font-size: medium;
+            color: yellow;
+        }
+        a{
+            text-decoration: none;
+            border: 1px solid black;
+            border-radius: 10px;
+        }
+    }
+}

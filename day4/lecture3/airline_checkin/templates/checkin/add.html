@@ -1,0 +1,17 @@
+{% extends 'checkin/layout.html'%}
+
+{% block body %}
+<main class="main">
+    <form class="card" method="post" action="{% url 'addCheckin'%}">
+        {% csrf_token %}
+        <label style="display: block; margin: 10px;" for="add">Add a checkin</label>
+        <div class="inputs">
+        {{form}}
+        </div>
+        <div class="buttons">
+            <button type="submit" class="add" style="margin: 10px;">Add</button>
+        </div>
+    </form>
+</main>
+
+{% endblock %}

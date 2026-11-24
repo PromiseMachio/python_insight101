@@ -1,0 +1,24 @@
+{% extends 'checkin/layout.html'%}
+
+{% block body %}
+<main class="main">
+        <div class="card">
+            
+            <ul>
+                <p>Checkins</p>
+                {% for checkin in checkins %}
+                    <li class="task">
+                        <input type="checkbox" {% if task.completed %}checked{% endif %}>
+                        {{ checkin.title }}
+                    </li>
+                {% empty %}
+                    <li>No checkins added yet.</li>
+                {% endfor %}
+            </ul>
+            <div class="buttons">
+                <a class="add" href="{% url 'addCheckin'%}">Add Task</a>
+                <a class="edit" href="#">Edit Task</a>
+            </div>
+        </div>
+    </main>
+{% endblock %}

@@ -1,0 +1,508 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>tables</title>
+    <style>
+        @media(min-width:600px) {
+            body>div {
+                padding: 10px;
+                background-color: antiquewhite;
+            }
+        }
+
+        @media(max-width:599px) {
+            body>div {
+                padding: 10px;
+                background-color: aliceblue;
+            }
+        }
+
+        h1 {
+            text-align: center;
+            color: gray;
+        }
+
+        table {
+            border: 1px solid black;
+            padding: 5px;
+            border-collapse: collapse;
+
+        }
+
+        thead {
+            font: bold;
+            text-decoration: underline;
+
+
+        }
+
+        th,
+        td {
+            font-size: small;
+            color: black;
+            font: lighter;
+            border: 1px solid black;
+            padding: 5px;
+        }
+
+        tr {
+            padding-left: 10px;
+            border-left: 1px solid black;
+        }
+
+        .league {
+            font-weight: 500;
+            text-overflow: hidden;
+            color: blue;
+        }
+
+        div>ol>li>ul {
+            color: gray;
+            font: 100;
+            font-size: small;
+        }
+
+        .boxes {
+            display: flex;
+            flex-wrap: wrap;
+
+        }
+
+        .box {
+            border: 1px solid black;
+            display: block;
+            text-align: left;
+            border-radius: 5px;
+            margin: 5px;
+            padding: 5px;
+            width: 200px;
+            background-color: burlywood;
+        }
+
+        .box-heading {
+            font: 500;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+        }
+        .grid{
+            display: grid;
+            padding: 20px;
+            grid-column-gap: 10px;
+            grid-row-gap: 10px ;
+            grid-template-columns: auto;
+        }
+        .grid-item{
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: beige;
+            color: black;
+        }
+        .grid-heading{
+            text-align: center;
+            font-size: medium;
+            font: bold;
+            text-decoration: underline;
+        }
+        .team-analysis > .grid > .grid-item > ol{
+            font-size: small;
+            font-weight: lighter;
+            color: gray;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <table>
+            <h2 style="color: gray; text-align: center;">Top ranked teams in 2026/2027 league games.</h2>
+            <thead>
+                <th>League</th>
+                <th>Teams</th>
+                <th>Top players</th>
+            </thead>
+            <tbody>
+                <tr>
+                    <td class="league">English premier league</td>
+                    <td>Manchester United</td>
+                    <td>Brian Mbeumo</td>
+                </tr>
+                <tr>
+                    <td class="league">Spain LALIGA</td>
+                    <td>Barcelona FC</td>
+                    <td>Raphiniah</td>
+                </tr>
+                <tr>
+                    <td class="league">Bundesliga</td>
+                    <td>FC Bayern Munich</td>
+                    <td>Luis Diaz</td>
+                </tr>
+            </tbody>
+
+        </table>
+    </div>
+
+    <div>
+        <h3>Top ranked coachs in 2026/2027 </h3>
+        <ol>
+            <li>Pep Guardiola
+                <ul>
+                    <li>Won the 2026/2027 English league</li>
+                    <li>Won the 2026/2027 champions league cup</li>
+                    <li>Won the 2026/2027 community shield</li>
+                    <li>Won the 2026/2027 FA cup</li>
+                </ul>
+            </li>
+            <li>
+                Jose Mourinhio
+                <ul>
+                    <li>Won the 2026/2027 France league</li>
+                    <li>Won the 2025/2026 champions league cup</li>
+
+                </ul>
+            </li>
+
+        </ol>
+    </div>
+    <div>
+        <h2>What is your view</h2>
+        <form>
+            <legend>
+                <label for="name">Name</label>
+                <input type="text" placeholder="name" name="name">
+                <label for="country">Region</label>
+                <input list="countries" name="country" placeholder="Region">
+                <datalist id="countries">
+                    <option value="Kenya">
+                    <option value="Uganda">
+                    <option value="Tanzania">
+                    <option value="DR Congo">
+                </datalist>
+            </legend>
+            <legend>
+                <label for="message">Drop your view</label>
+                <textarea name="message" id="message" rows="5" placeholder="Your view..."></textarea>
+            </legend>
+
+        </form>
+    </div>
+
+    <div>
+        <h4>Top players of the 2026/2027 season</h4>
+        <div class="boxes">
+            <div class="box">
+                <h6 class="box-heading">Lionel Messi</h6>
+                <p class="box-paragraph">Inter Miami</p>
+                <p class="box-text">Rating: 99</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Cristiano Ronaldo</h6>
+                <p class="box-paragraph">Al Nassr</p>
+                <p class="box-text">Rating: 98</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Kylian Mbappé</h6>
+                <p class="box-paragraph">Real Madrid</p>
+                <p class="box-text">Rating: 97</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Erling Haaland</h6>
+                <p class="box-paragraph">Manchester City</p>
+                <p class="box-text">Rating: 97</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Jude Bellingham</h6>
+                <p class="box-paragraph">Real Madrid</p>
+                <p class="box-text">Rating: 96</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Vinícius Júnior</h6>
+                <p class="box-paragraph">Real Madrid</p>
+                <p class="box-text">Rating: 96</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Mohamed Salah</h6>
+                <p class="box-paragraph">Liverpool</p>
+                <p class="box-text">Rating: 95</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Harry Kane</h6>
+                <p class="box-paragraph">Bayern Munich</p>
+                <p class="box-text">Rating: 95</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Kevin De Bruyne</h6>
+                <p class="box-paragraph">Napoli</p>
+                <p class="box-text">Rating: 94</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Rodri</h6>
+                <p class="box-paragraph">Manchester City</p>
+                <p class="box-text">Rating: 94</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Lamine Yamal</h6>
+                <p class="box-paragraph">Barcelona</p>
+                <p class="box-text">Rating: 93</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Bukayo Saka</h6>
+                <p class="box-paragraph">Arsenal</p>
+                <p class="box-text">Rating: 93</p>
+            </div>
+
+            <div class="box">
+                <h6 class="box-heading">Robert Lewandowski</h6>
+                <p class="box-paragraph">Barcelona</p>
+                <p class="box-text">Rating: 92</p>
+            </div>
+
+        </div>
+    </div>
+
+    <div class="team-analysis">
+        <h4>Overall Team Analysis</h4>
+
+        <div class="grid">
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Real Madrid</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 34</li>
+                    <li>Drawn: 0</li>
+                    <li>Lost: 2</li>
+                    <li>Goals scored: 98</li>
+                    <li>Goals conceded: 25</li>
+                    <li>Points: 102</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Excellent attacking performance and strong defensive
+                    organization. The team dominates possession and
+                    consistently creates scoring opportunities.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Barcelona</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 30</li>
+                    <li>Drawn: 4</li>
+                    <li>Lost: 2</li>
+                    <li>Goals scored: 91</li>
+                    <li>Goals conceded: 29</li>
+                    <li>Points: 94</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Strong possession-based football with excellent
+                    passing accuracy. The team creates numerous chances
+                    but occasionally struggles against counterattacks.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Manchester City</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 29</li>
+                    <li>Drawn: 5</li>
+                    <li>Lost: 2</li>
+                    <li>Goals scored: 88</li>
+                    <li>Goals conceded: 27</li>
+                    <li>Points: 92</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Outstanding midfield control and tactical discipline.
+                    The team maintains possession effectively and
+                    demonstrates consistent attacking quality.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Liverpool</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 27</li>
+                    <li>Drawn: 5</li>
+                    <li>Lost: 4</li>
+                    <li>Goals scored: 85</li>
+                    <li>Goals conceded: 35</li>
+                    <li>Points: 86</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Effective high pressing and quick attacking transitions.
+                    The team creates many scoring opportunities but
+                    needs greater defensive consistency.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Arsenal</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 26</li>
+                    <li>Drawn: 6</li>
+                    <li>Lost: 4</li>
+                    <li>Goals scored: 82</li>
+                    <li>Goals conceded: 30</li>
+                    <li>Points: 84</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Well-organized defence and effective set-piece execution.
+                    The team displays good teamwork but needs to
+                    improve its finishing in difficult matches.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Bayern Munich</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 25</li>
+                    <li>Drawn: 6</li>
+                    <li>Lost: 5</li>
+                    <li>Goals scored: 89</li>
+                    <li>Goals conceded: 38</li>
+                    <li>Points: 81</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Powerful attacking play and impressive goal-scoring
+                    ability. Defensive transitions remain an area
+                    that requires improvement.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Paris Saint-Germain</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 24</li>
+                    <li>Drawn: 7</li>
+                    <li>Lost: 5</li>
+                    <li>Goals scored: 80</li>
+                    <li>Goals conceded: 34</li>
+                    <li>Points: 79</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Creative attacking combinations and strong individual
+                    performances. Better defensive coordination would
+                    improve the team's overall stability.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Inter Milan</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 23</li>
+                    <li>Drawn: 8</li>
+                    <li>Lost: 5</li>
+                    <li>Goals scored: 76</li>
+                    <li>Goals conceded: 32</li>
+                    <li>Points: 77</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Strong defensive structure and intelligent tactical
+                    positioning. The team performs well in organized
+                    attacks and maintains a balanced playing style.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Chelsea</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 21</li>
+                    <li>Drawn: 8</li>
+                    <li>Lost: 7</li>
+                    <li>Goals scored: 74</li>
+                    <li>Goals conceded: 42</li>
+                    <li>Points: 71</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Promising attacking combinations and good individual
+                    talent. The team needs greater consistency in
+                    defence and better decision-making in the final third.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Manchester United</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 19</li>
+                    <li>Drawn: 7</li>
+                    <li>Lost: 10</li>
+                    <li>Goals scored: 68</li>
+                    <li>Goals conceded: 48</li>
+                    <li>Points: 64</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    The team demonstrates strong counterattacking ability
+                    but struggles with defensive consistency.
+                    Improved midfield control could strengthen performance.
+                </p>
+            </div>
+
+            <div class="grid-item">
+                <h6 class="grid-heading">Tottenham Hotspur</h6>
+                <p class="data">
+                <ol>
+                    <li>Matches played: 36</li>
+                    <li>Won: 18</li>
+                    <li>Drawn: 8</li>
+                    <li>Lost: 10</li>
+                    <li>Goals scored: 70</li>
+                    <li>Goals conceded: 52</li>
+                    <li>Points: 62</li>
+                </ol>
+                </p>
+                <p class="remarks">
+                    Attacking football and effective pressing create
+                    scoring opportunities. Defensive organization
+                    and consistency remain key areas for improvement.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
