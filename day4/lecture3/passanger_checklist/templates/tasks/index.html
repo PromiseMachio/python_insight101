@@ -1,0 +1,31 @@
+{% extends 'tasks/layout.html'%}
+
+{% block body %}
+    <main class="main">
+        <div class="card">
+            <p>
+                Passenger:
+                <span class="passenger-name">{{name.title}}</span>
+            </p>
+
+            <p>Phone Number: {{phoneNumber}}</p>
+
+            <ul>
+                <p>CheckList</p>
+                {% for task in tasks %}
+                    <li class="task">
+                        <input type="checkbox" {% if task.completed %}checked{% endif %}>
+                        {{ task.title }}
+                    </li>
+                {% empty %}
+                    <li>No tasks added yet.</li>
+                {% endfor %}
+            </ul>
+            <div class="buttons">
+                <a class="add" href="{% url 'add' name=name phoneNumber=phoneNumber%}">Add Task</a>
+                <a class="edit" href="#">Edit Task</a>
+            </div>
+        </div>
+    </main>
+
+{% endblock %}

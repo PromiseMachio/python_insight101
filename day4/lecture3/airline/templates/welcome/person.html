@@ -1,0 +1,29 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>person</title>
+    <link rel="stylesheet" href="{% static 'styles.css'%}">
+</head>
+
+<body>
+    
+    <main class="main">
+        <h1>User profile</h1>
+        <div class="card">
+            <div class="image">
+                <img src="{% static 'profile.jpg' %}" alt="profile" style="width: 200px;">
+            </div>
+            <div class="content">
+                <p id="name">{{name}}</p>
+                <p class="para">wallet: <span>$</span>2000</p>
+                <p class="para">Phone: +254 714916372</p>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>

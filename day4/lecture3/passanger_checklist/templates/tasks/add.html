@@ -1,0 +1,17 @@
+{% extends 'tasks/layout.html'%}
+
+{% block body %}
+<main class="main">
+    <form class="card" method="post" action="{% url 'add' name=name phoneNumber=phoneNumber %}">
+        {% csrf_token %}
+        <label style="display: block; margin: 10px;" for="add">Add a task to your Checklist</label>
+        <div class="inputs">
+        {{form}}
+        </div>
+        <div class="buttons">
+            <button type="submit" class="add" style="margin: 10px;">Add</button>
+        </div>
+    </form>
+</main>
+{% endblock %}
+<!-- <input type="text" style="display: block; padding: 10px; border-radius: 5px; background-color:antiquewhite ; color: black; width: 300px;"> -->
