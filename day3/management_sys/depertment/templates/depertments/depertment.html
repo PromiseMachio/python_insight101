@@ -1,0 +1,36 @@
+{% extends 'depertments/layout.html'%}
+
+{% block body %}
+<h1>Depertment {{depertments.id}}</h1>
+<ul>
+    <li>Depertment {{depertments.name}}</li>
+    <li>Code {{depertments.depertment_code}}</li>
+    <li>Contacts {{depertments.phone_number }}</li>
+</ul>
+<h2>Employees</h2>
+<ul>
+    {% for employee in employees %}
+    <li>{{employee}}</li>
+    {% empty %}
+    <p>No employee</p>
+    {% endfor %}
+</ul>
+<h2>Add Employee</h2>
+<form action="{% url 'add_employee' depertments.id %}" method="post">
+    {% csrf_token %}
+    <label for="employee">Select Employee:</label>
+    <select name="employee" id="employee">
+        {% for employee in non_employees %}
+        <option value="{{ employee.id }}">{{ employee }}</option>
+        {% empty %}
+        <option value="" disabled>All employees are assigned</option>
+        {% endfor %}
+    </select>
+    <br>
+    <input type="submit" value="Add to Department">
+</form>
+<a href="{% url 'depertments'%}">
+    Back
+</a>
+
+{% endblock %}

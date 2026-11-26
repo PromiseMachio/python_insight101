@@ -1,0 +1,19 @@
+{% extends 'depertments/layout.html' %}
+{% load static %}
+
+{% block body %}
+<h1>Departments</h1>
+
+<ul>
+    {% for department in depertments %}
+        <li>
+            <a href="{% url 'single_dpt' department.id %}">
+                {{ department.id }}
+                {{ department.name }}
+                {{ department.depertment_code }}
+                {{ department.phone_number }}
+            </a>
+        </li>
+    {% endfor %}
+</ul>
+{% endblock %}

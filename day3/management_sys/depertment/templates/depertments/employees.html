@@ -1,0 +1,12 @@
+{% extends 'depertments/layout.html'%}
+
+{% block body %}
+<h1>Employees</h1>
+<ul>
+    {%for employee in employees%}
+        <li>{{employee.id}} Names:{{employee.first}} {{employee.last}} <br> Job code {{employee.job_code}}<br>Depertment: {{employee.depertment}}</li>
+    {% empty %}
+    <p>No employees added yet</p>
+    {% endfor %}
+</ul>
+{% endblock %}
